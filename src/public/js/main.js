@@ -7,8 +7,21 @@ $(function(){
     const $messageBox = $('#message');
     const $chat = $('#chat');
 
+    const $nickForm = $("#NickForm");
+    const $nickname = $("#nickname");
+    const $nickerror = $("#nickerror");
+
+    const $users = $("#usernames");
     //Events
-    $("#messageForm").submit( e =>  {
+
+    $nickForm.submit(e => {
+        e.preventDefault();
+        socket.emit('new:user',$nickname.val(),data => {
+
+        });
+    })
+
+    $messageForm.submit( e =>  {
         e.preventDefault();
         socket.emit('send:message', $messageBox.val()); 
         $messageBox.val('');
