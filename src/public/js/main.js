@@ -7,7 +7,7 @@ $(function(){
     const $messageBox = $('#message');
     const $chat = $('#chat');
 
-    const $nickForm = $("#NickForm");
+    const $nickForm = $("#nickForm");
     const $nickname = $("#nickname");
     const $nickerror = $("#nickerror");
 

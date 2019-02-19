@@ -4,7 +4,7 @@ module.exports = function(io){
     io.on('connection', socket => {
         console.log("Un nuevo usuario conectado");
         
-        socket.on('new:user',(cb,data) => {
+        socket.on('new:user',(data,cb) => {
             console.log(data);  
             if(nicknames.indexOf(data) != -1){
                 cb(false);
