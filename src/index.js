@@ -9,7 +9,7 @@ const io = socketio.listen(server);
 
 const mongoose = require('mongoose');
 //dbConnection
-mongoose.connect('mongodb://localhost/chat-database')
+mongoose.connect('mongodb://cthompsonh:FFAEEBD568@java-chat-database-shard-00-00-5wbk5.mongodb.net:27017,java-chat-database-shard-00-01-5wbk5.mongodb.net:27017,java-chat-database-shard-00-02-5wbk5.mongodb.net:27017/test?ssl=true&replicaSet=java-chat-database-shard-0&authSource=admin&retryWrites=true')
 .then(db => console.log('db is connected'))
 .catch(err => console.log('error'))
 
